@@ -1,0 +1,185 @@
+/* Global Styles */
+body {
+    font-family: 'Montserrat Classic', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #484C57;
+}
+
+header {
+    background-color: #235D3A;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #B10001;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position:sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-index {
+    background-color: #B10001;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Slideshow Styles */
+#slideshow {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: slideAnimation 9s infinite;
+}
+
+@keyframes slideAnimation {
+    0%, 33% { opacity: 1; }
+    33.33%, 100% { opacity: 0; }
+}
+
+/* Menu styles */ 
+#menu-section > li {
+    margin-bottom: 4vh; 
+}
+
+/* Gallery Styles */
+#gallery {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-grid img {
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Mobile styles (max-width: 600px) */
+@media (max-width: 600px) {
+    header {
+        padding: 15px 0;
+        font-size: 1.2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #slideshow {
+        height: 250px; /* Adjust slideshow height for mobile */
+    }
+
+    #menu-section > li {
+        margin-bottom: 6vh; /* More spacing for mobile */
+    }
+
+    .gallery-grid img {
+        width: 150px;
+        height: 150px; /* Smaller images for mobile */
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+/* Tablet portrait (min-width: 601px and max-width: 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    header {
+        padding: 15px 0;
+        font-size: 1.4em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    #slideshow {
+        height: 300px; /* Adjust slideshow height for tablet portrait */
+    }
+
+    #menu-section > li {
+        margin-bottom: 5vh;
+    }
+
+    .gallery-grid img {
+        width: 180px;
+        height: 180px; /* Medium images for tablet portrait */
+    }
+
+    footer {
+        font-size: 1em;
+    }
+}
+
+/* Tablet landscape (min-width: 901px and max-width: 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+    header {
+        padding: 20px 0;
+        font-size: 1.6em;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    #slideshow {
+        height: 350px; /* Adjust slideshow height for tablet landscape */
+    }
+
+    #menu-section > li {
+        margin-bottom: 4vh;
+    }
+
+    .gallery-grid img {
+        width: 190px;
+        height: 190px; /* Slightly larger images for tablet landscape */
+    }
+
+    footer {
+        font-size: 1.1em;
+    }
+}
