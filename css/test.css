@@ -52,6 +52,7 @@ footer {
 
 /*menu foto*/
 /* Zorg ervoor dat main de volledige breedte en hoogte benut */
+
 .menu {
     display: flex;
     justify-content: center;
@@ -126,18 +127,33 @@ ul li {
 
 
 /* Slideshow Styles */
-.image_slideshow {
-    width: 80vw; /* Grotere breedte voor de slideshow-container */
-    height: 50vh; /* Grotere hoogte voor de slideshow-container */
-}
 
-/* Zorg dat main het hele scherm vult en alles centreert */
+/* Zorg dat main alles verticaal uitlijnt en het hele scherm vult */
 .main_home {
     display: flex;
-    justify-content: center; /* Horizontaal centreren */
-    align-items: center;     /* Verticaal centreren */
+    flex-direction: column; /* Zorgt ervoor dat alles verticaal wordt gestapeld */
+    justify-content: center; /* Verticaal centreren van de content */
+    align-items: center;     /* Horizontaal centreren van de content */
     height: 100vh;           /* Vul de volledige hoogte van het venster */
     box-sizing: border-box;
+}
+
+/* Zorg ervoor dat de grid-container alles verticaal stapelt */
+.grid-container {
+    display: grid;
+    grid-template-rows: auto 1fr; /* Eerste rij voor de titel, tweede rij voor de slideshow */
+    width: 100%;
+    max-width: 1200px; /* Maximale breedte van de container */
+    margin: 0 auto; /* Centrerend op de pagina */
+    gap: 20px; /* Ruimte tussen de titel en de slideshow */
+}
+
+/* Styling voor de titel */
+.title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin: 0; /* Geen extra marge rondom de titel */
 }
 
 /* Zorg dat de slideshow-container in het midden staat */
@@ -184,7 +200,22 @@ ul li {
     100% { opacity: 0; }
 }
 
+/* Styling voor de tekst onder de slideshow */
+.slideshow-text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #555;
+    width: 80%;
+    line-height: 1.5;
+    margin: 0 auto; /* Zorgt ervoor dat de tekst gecentreerd blijft */
+}
+
+
+
+
 /*styles van about us*/
+
 /* Flexbox layout voor main */
 .aboutus {
     display: flex;
@@ -236,7 +267,6 @@ ul li {
         width: 50%; /* Verklein de afbeeldingen nog verder voor kleine schermen */
     }
 }
-
 
 
 
@@ -353,3 +383,62 @@ ul li {
         font-size: 1.1em;
     }
 }
+
+/* reservation Styles */
+
+.main_reservation {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #235D3A;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #484C57;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #235D3A;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1b4a2e;
+}
+
+/* Responsive Form Styles */
+@media (max-width: 600px) {
+    main {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
